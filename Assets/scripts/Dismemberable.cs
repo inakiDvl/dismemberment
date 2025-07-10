@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Dismemberable : MonoBehaviour
 {
-    [SerializeField] private bool dismember = false;
     [SerializeField] private Rigidbody body;
     [SerializeField] private Dismemberable dismemberableChild;
 
@@ -30,14 +29,5 @@ public class Dismemberable : MonoBehaviour
     private void Awake()
     {
         body.gameObject.SetActive(false);    
-    }
-
-    private void Update()
-    {
-        if (dismember)
-        {
-            dismember = false;
-            Dismember();
-        }
     }
 }
